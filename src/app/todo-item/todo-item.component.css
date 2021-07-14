@@ -1,0 +1,94 @@
+.todo-item{
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    padding: 35px 15px;
+    border-bottom: 1px solid #f2f3f5;
+    cursor: pointer;
+    position: relative;
+   }
+.todo-item.completed{
+    color: #aaa;
+}
+
+.todo-item .check-box{
+    display: flex;
+    flex-shrink: 0;
+    border : 2px solid grey;
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;  
+    transition: background-color 0.3s, border-color 0.2s;
+}
+.check-box i.material-icons{
+    font-size: 20px;
+    margin: -2px;
+    color: #333;
+    /* hide by default */
+   opacity: 0;  
+   transition: opacity 0.2s;
+}
+.todo-item:hover .check-box{
+    border : 2px solid rgb(172, 171, 171);
+    border-radius: 50%;
+    
+    background: #dedfe0;
+    /* color: rgb(15, 17, 16); */
+    color: red;
+}
+.todo-item:hover .check-box i.material-icons{
+    opacity: 1     ;
+}
+
+.todo-item.completed .check-box{
+    background: #3fb6a6e1;
+    border-color: #3fb6a6e1;    
+}
+.todo-item.completed .check-box i.material-icons{
+    opacity: 1;
+}
+.todo-item .todo-controls-box{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+
+   /*   hide by default */
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(2px);
+
+   transition: opacity 0.3s, visibility 0.3s, transform 0.2s;
+}
+
+.todo-item:hover .todo-controls-box{
+    opacity: 1;
+   visibility: visible;
+   transition-delay: 0.5s;
+   transform: translateY(0);
+}
+.todo-controls-box .todo-control-button{
+    background: #f5f7f8;
+    padding: 7px 10px;
+    display: flex;  
+}
+.todo-controls-box .todo-control-button i.material-icons{
+    font-size: 20px;
+    color: #333;
+}
+.todo-controls-box .todo-control-button:first-of-type{
+border-top-left-radius: 7px;
+}
+.todo-controls-box .todo-control-button:last-of-type{
+    border-top-right-radius: 7px;   
+}
+.todo-controls-box .todo-control-button:hover{
+    background: #eee;
+}
+.todo-controls-box .todo-control-button.is-danger:hover i.material-icons{
+  color: rgb(155,27,27);
+}
+.todo-controls-box .todo-control-button.is-danger:active i.material-icons{
+    color: rgb(212, 38, 38);
+  }
