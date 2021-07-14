@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+ 
+  
+@import '../node_modules//bulma/css/bulma.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body { height: 100%; }
+   body { margin: 0; }
+
+ .alt-gradient-button{
+     border: none;
+     background: linear-gradient(to right ,rgb(241, 6, 124),rgb(255, 165, 0));
+     color: white;
+     font-weight: 600;
+     opacity: 0.92;
+   
+ }
+ .alt-gradient-button:hover{
+    opacity: 1;
+    color:white;
+    box-shadow: 0px 0px 0px 3px rgba(228, 69, 167, 0.2);
+}
+ .alt-gradient-button:active{
+         opacity: 0.8;
+     }
+     .alt-gradient-button:focus{
+         color: white;
+         opacity: 1;
+     }
+     i.material-icons{
+        margin-right: 5px;
+        margin-left: -4px;
+     }
+
+
